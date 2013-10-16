@@ -1,0 +1,712 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"f",
+				"field	Default"
+			],
+			[
+				"upper",
+				"upper()	string"
+			],
+			[
+				"model",
+				"modelHandler	(global, class)"
+			],
+			[
+				"url",
+				"urlparse	Default"
+			],
+			[
+				"pars",
+				"parse_qsl  (function)"
+			],
+			[
+				"logreg",
+				"LogisticRegression"
+			],
+			[
+				"for",
+				"format()	string"
+			],
+			[
+				"S",
+				"Scaler  (class)"
+			],
+			[
+				"eva",
+				"eval_print	Default"
+			],
+			[
+				"St",
+				"StandardScaler	(imported, instance)"
+			],
+			[
+				"x",
+				"x_train	Default"
+			],
+			[
+				"li",
+				"linear_model  (module)"
+			],
+			[
+				"sys",
+				"sysLabLucene	Default"
+			],
+			[
+				"ma",
+				"mah:n	max-height:none"
+			],
+			[
+				"mar",
+				"margin-right"
+			],
+			[
+				"tex",
+				"text-align"
+			],
+			[
+				"pad",
+				"padding"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"pa",
+				"pad	CSS - padding: 0;"
+			],
+			[
+				"au",
+				"auto"
+			],
+			[
+				"padd",
+				"padding-right"
+			],
+			[
+				"word",
+				"word	Default"
+			],
+			[
+				"re",
+				"relative"
+			],
+			[
+				"1",
+				"1px"
+			],
+			[
+				"P",
+				"pow()	pow fn"
+			],
+			[
+				"D",
+				"Dropbox"
+			],
+			[
+				"a",
+				"abs()	abs fn"
+			],
+			[
+				"add",
+				"add()	set"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "postSimpleHTTP.py",
+			"settings":
+			{
+				"buffer_size": 3076,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "postSimpleHTTPServer.py",
+			"settings":
+			{
+				"buffer_size": 2614,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "import flask, flask.views \nimport os\n\napp = flask.Flask(__name__)\n\n\napp.secrect_key = 'python_key'\n\nclass View(flask.views.MethodView):\n	def get(self):\n		return \"hello world\"\n		\n\n	def post(self):\n		a = flask.request.form('query')\n		return \"post works\"\n\n\nclass Remote(flask.views.MethodView):\n	def get(self):\n		return flask.render_template('index.html')\n\n\n	def post(self):\n		result = eval(flask.request.form['expression'])\n		flask.flash(result)\n		return self.get()\n\n\napp.add_url_rule('/', view_func=View.as_view('main'), methods=['GET', 'POST'])\napp.add_url_rule('/remote', view_func=Remote.as_view('remote'), methods=['GET', 'POST'])\n\napp.debug = True\n\napp.run()",
+			"file": "flaskServer.py",
+			"file_size": 656,
+			"file_write_time": 1355107106000000,
+			"settings":
+			{
+				"buffer_size": 662,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "data_read.py",
+			"settings":
+			{
+				"buffer_size": 1518,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "ibash",
+			"settings":
+			{
+				"buffer_size": 2443,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "Packages/Python/Python.sublime-build",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"dis",
+				"SublimeLinter: Disable Linting"
+			],
+			[
+				"WRAP",
+				"Word Wrap: Toggle"
+			],
+			[
+				"can",
+				"Build: Cancel"
+			],
+			[
+				"canc",
+				"Build: Cancel"
+			],
+			[
+				"linter",
+				"SublimeLinter: Reset"
+			],
+			[
+				"linter cu",
+				"SublimeLinter: Lint Current File"
+			],
+			[
+				"disable ",
+				"SublimeLinter: Disable Linting"
+			],
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			],
+			[
+				"Upper",
+				"Convert Case: Upper Case"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"",
+				"Convert Case: Upper Case"
+			]
+		],
+		"width": 602.0
+	},
+	"console":
+	{
+		"height": 539.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/data/Dropbox/gae/oxford/dos.yaml",
+		"/usr/lib/python2.7/SocketServer.py",
+		"/usr/lib/python2.7/BaseHTTPServer.py",
+		"/usr/lib/python2.7/socket.py",
+		"/data/Dropbox/python/Learning/postSimpleHTTPServer.py",
+		"/home/zheng/.config/sublime-text-2/Packages/User/SublimeLinter.sublime-settings",
+		"/home/zheng/.config/sublime-text-2/Packages/SublimeLinter/README.md",
+		"/home/zheng/.config/sublime-text-2/Packages/SublimeLinter/Default (Linux).sublime-keymap",
+		"/home/zheng/.config/sublime-text-2/Packages/SublimeLinter/SublimeLinter.sublime-settings",
+		"/home/zheng/.config/sublime-text-2/Packages/User/Default (Linux).sublime-keymap",
+		"/home/zheng/.config/sublime-text-2/Packages/Default/Default (Linux).sublime-keymap",
+		"/data/Dropbox/python/lucene/modelServer.py",
+		"/data/Dropbox/python/scikit-learn/doc/README",
+		"/data/Dropbox/python/scikit-learn/doc/_build/doctrees/auto_examples/plot_classification_probability.doctree",
+		"/data/Dropbox/python/scikit-learn/doc/whats_new.rst",
+		"/data/Dropbox/python/lucene/sigir13 (zheng-ThinkPad-T400's conflicted copy 2012-12-06).py",
+		"/data/Dropbox/gae/goodictionary/adGoogle.py",
+		"/data/Dropbox/gae/oxford/sitemap.xml",
+		"/data/Dropbox/gae/oxford/static/main.css",
+		"/home/zheng/.config/sublime-text-2/Packages/Alignment/Base File.sublime-settings",
+		"/data/Dropbox/gae/oxford/pygeoip/timezone.py",
+		"/data/Dropbox/gae/oxford/foo.txt",
+		"/data/Dropbox/gae/oxford/index.htm~",
+		"/data/Dropbox/gae/oxford/index1.html",
+		"/data/Dropbox/gae/oxford/library5.zip",
+		"/data/Dropbox/gae/oxford/indexnew.html",
+		"/data/Dropbox/shell/sync_sublime.sh",
+		"/data/Dropbox/python/Learning/multicore.py",
+		"/home/zheng/.config/sublime-text-2/Packages/Alignment/Default (Linux).sublime-keymap",
+		"/home/zheng/.config/sublime-text-2/Packages/User/Side Bar.sublime-settings",
+		"/home/zheng/.config/sublime-text-2/Packages/SublimeCodeIntel/Base File.sublime-settings",
+		"/home/zheng/.config/sublime-text-2/Packages/SublimeRope/README.markdown",
+		"/data/Dropbox/shell/sync_sublime",
+		"/home/zheng/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
+		"/data/Dropbox/python/Learning/index.html",
+		"/data/Dropbox/python/lucene/setup.py",
+		"/data/Dropbox/python/Learning/singlecore.py",
+		"/data/Dropbox/python/Learning/ndb.py",
+		"/data/Dropbox/python/Learning/IPC.py",
+		"/data/Dropbox/gae/learn/listocd.py",
+		"/data/Dropbox/gae/learn/ndb.py",
+		"/home/zheng/.config/sublime-text-2/Packages/Package Control/Package Control.sublime-settings",
+		"/data/Dropbox/gae/oxford/static/list.txt",
+		"/data/Dropbox/gae/oxford/static/style.css"
+	],
+	"find":
+	{
+		"height": 39.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"function",
+			"This",
+			"\n#",
+			"This",
+			"wrap",
+			"com",
+			"wrap",
+			"wrap\nwrap",
+			"wrap\n",
+			"write",
+			"ARDRegression",
+			"lreg",
+			"LinearRegression",
+			"lreg",
+			"LinearRegression",
+			"load_svmlight_file",
+			"query_id",
+			"ip",
+			"post",
+			"blank",
+			"font",
+			"navBar",
+			"wordinfo += '<a href=\"search1?word=' + cd + '\" target=\"_blank\">' +  cd + '</a>&nbsp;&nbsp;'",
+			"oxford",
+			" \n",
+			"))\n",
+			"a",
+			"def",
+			"fid",
+			"while",
+			"print",
+			"socket",
+			"self.s"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 4,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "postSimpleHTTP.py",
+					"settings":
+					{
+						"buffer_size": 3076,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								104,
+								104
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110
+							],
+							"gjslint_options":
+							[
+							],
+							"incomplete_sync": null,
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"origin_encoding": "Undefined",
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E251",
+								"E501",
+								"W191",
+								"E303",
+								"E202",
+								"E401",
+								"E225",
+								"W293",
+								"E201",
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": false,
+							"sublimelinter_delay": 2,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": false,
+							"sublimelinter_mark_style": "outline",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true,
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "postSimpleHTTPServer.py",
+					"settings":
+					{
+						"buffer_size": 2614,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1880,
+								1880
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "flaskServer.py",
+					"settings":
+					{
+						"buffer_size": 662,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								178,
+								178
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"origin_encoding": "Undefined",
+							"sublimelinter": false,
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"translate_tabs_to_spaces": false,
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "data_read.py",
+					"settings":
+					{
+						"buffer_size": 1518,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1135,
+								1135
+							]
+						],
+						"settings":
+						{
+							"auto_name": "",
+							"origin_encoding": "ASCII",
+							"sublimelinter": false,
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 407.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "ibash",
+					"settings":
+					{
+						"buffer_size": 2443,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								445,
+								445
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"origin_encoding": "ASCII",
+							"rulers":
+							[
+							],
+							"sublimelinter": false,
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true,
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 42.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 364.0
+	},
+	"output.help_panel":
+	{
+		"height": 148.0
+	},
+	"output.sftp":
+	{
+		"height": 0.0
+	},
+	"replace":
+	{
+		"height": 72.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"sigir1",
+				"lucene/sigir13 (zheng-ThinkPad-T400's conflicted copy 2012-12-06).py"
+			],
+			[
+				"package",
+				"Package Control Messages"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"sci",
+				"/data/Dropbox/python/scikit-learn/scikit.sublime-project"
+			],
+			[
+				"",
+				"/data/Dropbox/python/scikit-learn/scikit.sublime-project"
+			],
+			[
+				"g",
+				"/data/Dropbox/gae/goodictionary/goodictionary.sublime-project"
+			],
+			[
+				"good",
+				"/data/Dropbox/gae/goodictionary/goodictionary.sublime-project"
+			],
+			[
+				"ox",
+				"/data/Dropbox/python/projects/oxford.sublime-project"
+			],
+			[
+				"goo",
+				"/data/Dropbox/gae/goodictionary/goodictionary.sublime-project"
+			],
+			[
+				"l",
+				"/data/Dropbox/python/Learning/Learn.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 316.0,
+	"status_bar_visible": true
+}
