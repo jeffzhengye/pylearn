@@ -32,6 +32,7 @@ def sim():
     p2 = request.values.get('word2', 'unknown')
     return '%s' % 0.5689
 
+
 if __name__ == "__main__":
     app.debug = True
     #app.run()
