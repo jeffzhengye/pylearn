@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f76d1259-5215-4f45-8f84-e655fdd70852" name="Default" comment="" />
+    <list default="true" id="f76d1259-5215-4f45-8f84-e655fdd70852" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/flaskTest.py" afterPath="$PROJECT_DIR$/flaskTest.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="Learning.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -48,7 +51,7 @@
       <file leaf-file-name="flaskTest.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/flaskTest.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="34" selection-start="561" selection-end="561" vertical-scroll-proportion="0.5686901" vertical-offset="4" max-vertical-offset="630">
+            <state line="23" column="29" selection-start="526" selection-end="526" vertical-scroll-proportion="0.5207668" vertical-offset="19" max-vertical-offset="645">
               <folding />
             </state>
           </provider>
@@ -643,7 +646,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/flaskTest.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="34" selection-start="561" selection-end="561" vertical-scroll-proportion="0.5686901" vertical-offset="4" max-vertical-offset="630">
+        <state line="23" column="29" selection-start="526" selection-end="526" vertical-scroll-proportion="0.5207668" vertical-offset="19" max-vertical-offset="645">
           <folding />
         </state>
       </provider>
