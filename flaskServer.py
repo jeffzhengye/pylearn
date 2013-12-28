@@ -31,5 +31,4 @@ app.add_url_rule('/', view_func=View.as_view('main'), methods=['GET', 'POST'])
 app.add_url_rule('/', view_func=Remote.as_view('remote'), methods=['GET', 'POST'])
 
 app.debug = True
-
 app.run()

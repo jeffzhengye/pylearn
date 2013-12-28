@@ -5,7 +5,8 @@ import httplib, mimetypes
  
 HOST = '127.0.0.1'
 PORT = '8080' 
- 
+
+
 def post_multipart(host, port, selector, fields, files):
         """
         Post fields and files to an http host as multipart/form-data.
@@ -23,7 +24,8 @@ def post_multipart(host, port, selector, fields, files):
         #errcode, errmsg, headers = h.getreply()
         h.getreply()
         return h.file.read() 
- 
+
+
 def encode_multipart_formdata(fields, files):
         """
         fields is a sequence of (name, value) elements for regular form fields.

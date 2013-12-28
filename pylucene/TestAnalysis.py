@@ -61,7 +61,7 @@ def testStandard():
 def testPorter():
     print 'lucene', lucene.VERSION, lucene.CLASSPATH
     input = 'this is a test string for Analyzer'
-    input = "104>  Johannesburg SABC TV 1 Network "
+    input = "krasnoselskii organ  distingish zalog injection injector gps information"
     analyzer = PorterStemmerAnalyzer()
     ts = analyzer.tokenStream("dummy", StringReader(input))
     offsetAtt = ts.addAttribute(OffsetAttribute.class_)
