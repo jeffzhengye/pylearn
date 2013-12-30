@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f76d1259-5215-4f45-8f84-e655fdd70852" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/algorithm/BinarySearchTree.py" afterPath="$PROJECT_DIR$/algorithm/BinarySearchTree.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/algorithm/RedBlackTree.py" afterPath="$PROJECT_DIR$/algorithm/RedBlackTree.py" />
     </list>
     <ignored path="Learning.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -110,10 +109,9 @@
       <file leaf-file-name="RedBlackTree.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/algorithm/RedBlackTree.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="185" column="39" selection-start="3781" selection-end="3781" vertical-scroll-proportion="0.58115184" vertical-offset="2442" max-vertical-offset="3375">
+            <state line="4" column="32" selection-start="132" selection-end="132" vertical-scroll-proportion="0.10471204" vertical-offset="0" max-vertical-offset="3375">
               <folding>
-                <element signature="e#0#137#1" expanded="true" />
-                <element signature="e#2688#2712#1" expanded="true" />
+                <element signature="e#2693#2717#1" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -160,8 +158,8 @@
         <option value="$PROJECT_DIR$/docopt_test.py" />
         <option value="$PROJECT_DIR$/db/Redis.py" />
         <option value="$PROJECT_DIR$/algorithm/23tree.py" />
-        <option value="$PROJECT_DIR$/algorithm/RedBlackTree.py" />
         <option value="$PROJECT_DIR$/algorithm/BinarySearchTree.py" />
+        <option value="$PROJECT_DIR$/algorithm/RedBlackTree.py" />
       </list>
     </option>
   </component>
@@ -778,10 +776,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/algorithm/RedBlackTree.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="185" column="39" selection-start="3781" selection-end="3781" vertical-scroll-proportion="0.58115184" vertical-offset="2442" max-vertical-offset="3375">
+        <state line="4" column="32" selection-start="132" selection-end="132" vertical-scroll-proportion="0.10471204" vertical-offset="0" max-vertical-offset="3375">
           <folding>
-            <element signature="e#0#137#1" expanded="true" />
-            <element signature="e#2688#2712#1" expanded="true" />
+            <element signature="e#2693#2717#1" expanded="true" />
           </folding>
         </state>
       </provider>

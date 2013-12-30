@@ -2,7 +2,7 @@
 Python implementation of left leaning RBT
 https://class.coursera.org/algs4partI-003/lecture/50
 
-Note: doesn't support same values
+Note: doesn't support duplicate values
 """
 __author__ = 'zheng'
 
