@@ -1,7 +1,17 @@
 """
-Python Recursive implementation of BST
+Python implementation of left leaning RBT
+https://class.coursera.org/algs4partI-003/lecture/50
+
+Note: doesn't support same values
 """
 __author__ = 'zheng'
+
+RED = True
+BLACK = False
+
+def isRed(node):
+	if node is None: return False
+	return node.color == RED
 
 
 class Node:
@@ -10,29 +20,57 @@ class Node:
 		self.left = None
 		self.right = None
 		self.count = 0
+		self.color = RED
 
 
-class BST:
+class LLRBT:
 	def __init__(self):
 		self.root = None
 
-	def insert(self, data):
-		if not self.root:
-			self.root = Node(data)
-		else:
-			self.__insert__(self.root, Node(data))
+	def rotateLeft(self, h):
+		assert isRed(h.right)
+		x = h.right
+		h.right = x.left
+		x.left = h
+		x.color = h.color
+		h.color = RED
+		return x
 
-	def __insert__(self, node, dNode):
-		if dNode.data < node.data:
-			if node.left is None:
-				node.left = dNode
-			else:
-				self.__insert__(node.left, dNode)
-		else:  ##if equals right, insert as right child
-			if node.right is None:
-				node.right = dNode
-			else:
-				self.__insert__(node.right, dNode)
+	def rotateRight(self, h):
+		assert isRed(h.left)
+		x = h.left
+		h.left = x.right
+		x.right = h
+		x.color = h.color
+		h.color = RED
+		return x
+
+	def put(self, data):
+		self.root = self.__put__(self.root, data)
+
+	def __put__(self, h, data):
+		if h is None: return Node(data)
+		if data < h.data:
+			h.left = self.__put__(h.left, data)
+		elif data > h.data:
+			h.right = self.__put__(h.right, data)
+		else:
+			h.data = data
+			return h
+
+		if isRed(h.right) and not isRed(h.left):
+			h = self.rotateLeft(h)
+		if isRed(h.left) and isRed(h.left.left):
+			h = self.rotateRight(h)
+		if isRed(h.left) and isRed(h.right):
+			h = self.__flipColors__(h)
+		return h
+
+	def __flipColors__(self, h):
+		h.left.color = BLACK
+		h.right.color = BLACK
+		h.color = RED
+		return h
 
 	def search_nonrecursive(self, data):
 		proot = self.root
@@ -168,9 +206,9 @@ class BST:
 
 
 def main():
-	a = BST()
+	a = LLRBT()
 	data = range(100, 1, -1)
-	map(lambda x: a.insert(x), data)
+	map(lambda x: a.put(x), data)
 	a.printOrderedTree()
 	print('rank=%s' % a.rank(42))
 	print('min=%s' % a.min().data)
