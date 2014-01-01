@@ -46,14 +46,14 @@ class LLRBT:
 		return x
 
 	def put(self, data):
-		self.root = self.__put__(self.root, data)
+		self.root = self._put(self.root, data)
 
-	def __put__(self, h, data):
+	def _put(self, h, data):
 		if h is None: return Node(data)
 		if data < h.data:
-			h.left = self.__put__(h.left, data)
+			h.left = self._put(h.left, data)
 		elif data > h.data:
-			h.right = self.__put__(h.right, data)
+			h.right = self._put(h.right, data)
 		else:
 			h.data = data
 			return h
@@ -63,10 +63,10 @@ class LLRBT:
 		if isRed(h.left) and isRed(h.left.left):
 			h = self.rotateRight(h)
 		if isRed(h.left) and isRed(h.right):
-			h = self.__flipColors__(h)
+			h = self._flipColors(h)
 		return h
 
-	def __flipColors__(self, h):
+	def _flipColors(self, h):
 		h.left.color = BLACK
 		h.right.color = BLACK
 		h.color = RED
@@ -85,50 +85,50 @@ class LLRBT:
 
 
 	def search(self, data):
-		return self.__search__(self.root, data)
+		return self._search(self.root, data)
 
-	def __search__(self, node, data):
+	def _search(self, node, data):
 		if node is None:
 			return None
 		if data == node.data:
 			return node
 		elif data < node.data:
-			return self.__search__(node.left, data)
+			return self._search(node.left, data)
 		else:
-			return self.__insert__(node.right, data)
+			return self._insert(node.right, data)
 
 	def floor(self, data):
-		return self.__floor__(self.root, data)
+		return self._floor(self.root, data)
 
-	def __floor__(self, node, data):
+	def _floor(self, node, data):
 		if node is None:
 			return None
 		if data == node.data:
 			return node
 		if data < node.data:
-			return self.__floor__(node.left, data)
+			return self._floor(node.left, data)
 
-		t = self.__floor__(node.righ, data)
+		t = self._floor(node.righ, data)
 		if t is not None:
 			return t
 		else:
 			return node
 
 	def ceiling(self, data):
-		return self.__ceiling__(self.root, data)
+		return self._ceiling(self.root, data)
 
-	def __ceiling__(self, node, data):
+	def _ceiling(self, node, data):
 		pass
 
 	def rank(self, data):
-		return self.__rank__(self.root, data)
+		return self._rank(self.root, data)
 
-	def __rank__(self, node, data):
+	def _rank(self, node, data):
 		if node is None: return 0
 		if data < node.data:
-			return self.__rank__(node.left, data)
+			return self._rank(node.left, data)
 		elif data > node.data:
-			return self.__size__(node.left) + 1 + self.__rank__(node.right, data)
+			return self.__size__(node.left) + 1 + self._rank(node.right, data)
 		else:
 			return self.__size__(node.left)
 
@@ -156,31 +156,31 @@ class LLRBT:
 
 
 	def min(self):
-		return self.__min__(self.root)
+		return self._min(self.root)
 
-	def __min__(self, node):
+	def _min(self, node):
 		if node.left is None:
 			return node
 		else:
-			return self.__min__(node.left)
+			return self._min(node.left)
 
 	def delMin(self):
-		self.root = self.__delMin__(self.root)
+		self.root = self._delMin(self.root)
 
-	def __delMin__(self, node):
+	def _delMin(self, node):
 		if node.left is None:
 			return node.right
-		node.left = self.__delMin__(node.left)
+		node.left = self._delMin(node.left)
 		return node
 
 	def max_depth(self):
-		return self.__max_depth__(self.root)
+		return self._max_depth(self.root)
 
-	def __max_depth__(self, node):
+	def _max_depth(self, node):
 		if node is None:
 			return 0
 		else:
-			return 1 + max(self.__max_depth__(node.left), self.__max_depth__(node.right))
+			return 1 + max(self._max_depth(node.left), self._max_depth(node.right))
 
 	def size(self):
 		return self.__size__(self.root)
@@ -190,31 +190,34 @@ class LLRBT:
 			return 0
 		return self.__size__(node.left) + 1 + self.__size__(node.right)
 
-	def printOrderedTree(self):
+	def __print__(self):
 		"""
+		print nodes in descending order
 		"""
-		self.__print__(self.root)
+		def _print(node):
+			if node is None:
+				return
+			if node.left:
+				_print(node.left)
+			print(node.data)
+			if node.right:
+				_print(node.right)
 
-	def __print__(self, node):
-		if node is None:
-			return
-		if node.left:
-			self.__print__(node.left)
-		print(node.data)
-		if node.right:
-			self.__print__(node.right)
+		_print(self.root)
+
 
 
 def main():
 	a = LLRBT()
 	data = range(100, 1, -1)
 	map(lambda x: a.put(x), data)
-	a.printOrderedTree()
+	a.__print__()
+	#print a
 	print('rank=%s' % a.rank(42))
 	print('min=%s' % a.min().data)
 	print('maxDepth=%s' % a.max_depth())
 	from math import log
-	print('size=%s logsize=%s' % (a.size(), log(a.size(), 2)))
+	print('size=%s logsize=%s' % (a.size(), log(a.size(), 2) +1))
 
 if __name__ == "__main__":
 	main()
