@@ -2,7 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f76d1259-5215-4f45-8f84-e655fdd70852" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/algorithm/RedBlackTree.py" afterPath="$PROJECT_DIR$/algorithm/RedBlackTree.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/SimpleHTTPServerWithUpload.py" afterPath="$PROJECT_DIR$/network/SimpleHTTPServerWithUpload.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/client.py" afterPath="$PROJECT_DIR$/network/client.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/flaskServer.py" afterPath="$PROJECT_DIR$/network/flaskServer.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/flaskTest.py" afterPath="$PROJECT_DIR$/network/flaskTest.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/multicore.py" afterPath="$PROJECT_DIR$/speed/multicore.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/multicore1.py" afterPath="$PROJECT_DIR$/speed/multicore1.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/multicore2.py" afterPath="$PROJECT_DIR$/speed/multicore2.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/multicore3.py" afterPath="$PROJECT_DIR$/speed/multicore3.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/sendemail.py" afterPath="$PROJECT_DIR$/network/sendemail.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/simplehttpserver-example-2.py" afterPath="$PROJECT_DIR$/network/simplehttpserver-example-2.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/simplehttpserver.py" afterPath="$PROJECT_DIR$/network/simplehttpserver.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/singlecore.py" afterPath="$PROJECT_DIR$/speed/singlecore.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/socketserver.py" afterPath="$PROJECT_DIR$/network/socketserver.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/urllib_test.py" afterPath="$PROJECT_DIR$/network/urllib_test.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cython/cimport.pyx" afterPath="$PROJECT_DIR$/cython/cimport.pyx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Learning.iws" />
@@ -15,20 +29,23 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/Learning$docopt.coverage" NAME="docopt Coverage Results" MODIFIED="1386126779478" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Learning$BinarySearchTree.coverage" NAME="BinarySearchTree Coverage Results" MODIFIED="1388542845008" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/algorithm" />
+    <SUITE FILE_PATH="coverage/Learning$docopt.coverage" NAME="docopt Coverage Results" MODIFIED="1386126779478" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Learning$youdao.coverage" NAME="youdao Coverage Results" MODIFIED="1396406065406" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/network" />
     <SUITE FILE_PATH="coverage/Learning$blackburn_pendulum.coverage" NAME="blackburn_pendulum Coverage Results" MODIFIED="1380641928856" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/cython/scipy2013-cython-tutorial-master/demo/blackburn-pendulum" />
     <SUITE FILE_PATH="coverage/Learning$multicore.coverage" NAME="multicore Coverage Results" MODIFIED="1380641916148" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Learning$flask.coverage" NAME="flask Coverage Results" MODIFIED="1382030442972" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Learning$urllib_test.coverage" NAME="urllib_test Coverage Results" MODIFIED="1384814863192" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pylucene" />
+    <SUITE FILE_PATH="coverage/Learning$RegexPattern.coverage" NAME="RegexPattern Coverage Results" MODIFIED="1392068427321" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Learning$Unittest_BPlusTreeTests_test_bulkload.coverage" NAME="Unittest BPlusTreeTests.test_bulkload Coverage Results" MODIFIED="1388562311302" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/algorithm" />
+    <SUITE FILE_PATH="coverage/Learning$urllib_test.coverage" NAME="urllib_test Coverage Results" MODIFIED="1392068433727" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Learning$Unittests_in_BTree.coverage" NAME="Unittests in BTree Coverage Results" MODIFIED="1388563570129" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/algorithm" />
     <SUITE FILE_PATH="coverage/Learning$Redis.coverage" NAME="Redis Coverage Results" MODIFIED="1386129224866" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/db" />
+    <SUITE FILE_PATH="coverage/Learning$sklearn.coverage" NAME="sklearn Coverage Results" MODIFIED="1394060308176" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Learning$timing.coverage" NAME="timing Coverage Results" MODIFIED="1380683743451" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/cython/scipy2013-cython-tutorial-master/exercises/julia" />
     <SUITE FILE_PATH="coverage/Learning$RedBlackTree.coverage" NAME="RedBlackTree Coverage Results" MODIFIED="1388543372731" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/algorithm" />
     <SUITE FILE_PATH="coverage/Learning$pickle_compress.coverage" NAME="pickle_compress Coverage Results" MODIFIED="1381783556646" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Learning$TestAnalysis.coverage" NAME="TestAnalysis Coverage Results" MODIFIED="1382729168837" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pylucene" />
-    <SUITE FILE_PATH="coverage/Learning$BTree.coverage" NAME="BTree Coverage Results" MODIFIED="1388563600511" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/algorithm" />
+    <SUITE FILE_PATH="coverage/Learning$BTree.coverage" NAME="BTree Coverage Results" MODIFIED="1391730495194" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/algorithm" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -47,99 +64,73 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="multicore1.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/multicore1.py">
+      <file leaf-file-name="youdao.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/network/youdao.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="0" selection-start="360" selection-end="360" vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="300">
+            <state line="58" column="18" selection-start="1244" selection-end="1244" vertical-scroll-proportion="0.37921348" vertical-offset="570" max-vertical-offset="1920">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="urllib_test.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/urllib_test.py">
+      <file leaf-file-name="fib.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cython/fib.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="34" selection-start="623" selection-end="623" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="585">
+            <state line="12" column="12" selection-start="264" selection-end="264" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="270">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="docopt_test.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docopt_test.py">
+      <file leaf-file-name="cimport.pyx" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cython/cimport.pyx">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="0" selection-start="1496" selection-end="1496" vertical-scroll-proportion="0.0" vertical-offset="525" max-vertical-offset="660">
+            <state line="2" column="0" selection-start="55" selection-end="108" vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="240">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="client.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client.py">
+      <file leaf-file-name="test_pyximport.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cython/scipy2013-cython-tutorial-master/test_cython/test_pyximport.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="0" selection-start="100" selection-end="100" vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="360">
+            <state line="4" column="18" selection-start="153" selection-end="153" vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="165">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ndb.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db/ndb.py">
+      <file leaf-file-name="test_cython.pyx" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cython/scipy2013-cython-tutorial-master/test_cython/test_cython.pyx">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1215">
+            <state line="20" column="0" selection-start="400" selection-end="400" vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="390">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Redis.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db/Redis.py">
+      <file leaf-file-name="setup.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cython/scipy2013-cython-tutorial-master/demo/fib/setup.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="12" selection-start="155" selection-end="155" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="195">
+            <state line="17" column="1" selection-start="528" selection-end="528" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="360">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BinarySearchTree.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/algorithm/BinarySearchTree.py">
+      <file leaf-file-name="fib.pyx" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cython/scipy2013-cython-tutorial-master/demo/fib/fib.pyx">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="180" column="26" selection-start="3776" selection-end="3776" vertical-scroll-proportion="0.0" vertical-offset="2700" max-vertical-offset="2805">
+            <state line="5" column="12" selection-start="110" selection-end="110" vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="180">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RedBlackTree.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/algorithm/RedBlackTree.py">
+      <file leaf-file-name="time_extern.pyx" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cython/scipy2013-cython-tutorial-master/demo/wrap-c-time/time_extern.pyx">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="216" column="34" selection-start="4235" selection-end="4235" vertical-scroll-proportion="0.0" vertical-offset="2557" max-vertical-offset="3390">
-              <folding>
-                <element signature="e#0#142#1" expanded="true" />
-                <element signature="e#3847#3890#1" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BTree.py" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/algorithm/BTree.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="313" column="41" selection-start="9458" selection-end="9458" vertical-scroll-proportion="0.4701835" vertical-offset="3790" max-vertical-offset="8820">
-              <folding>
-                <element signature="e#0#8#1" expanded="true" />
-                <element signature="e#33#46#0" expanded="true" />
-                <element signature="e#3935#5356#0" expanded="false" />
-                <element signature="e#8293#8306#1" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="23tree.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/algorithm/23tree.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="0" selection-start="75" selection-end="75" vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="165">
+            <state line="21" column="0" selection-start="417" selection-end="417" vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="405">
               <folding />
             </state>
           </provider>
@@ -163,15 +154,7 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/pylucene/TestAnalyzer.py" />
-        <option value="$PROJECT_DIR$/pickle_compress.py" />
-        <option value="$PROJECT_DIR$/flask.py" />
-        <option value="$PROJECT_DIR$/flaskTest.py" />
-        <option value="$PROJECT_DIR$/pylucene/TestAnalysis.py" />
-        <option value="$PROJECT_DIR$/postSimpleHTTP.py" />
-        <option value="$PROJECT_DIR$/pylucene/urllib_test.py" />
         <option value="$PROJECT_DIR$/flaskServer.py" />
-        <option value="$PROJECT_DIR$/urllib_test.py" />
         <option value="$PROJECT_DIR$/docopt.py" />
         <option value="$PROJECT_DIR$/docopt_test.py" />
         <option value="$PROJECT_DIR$/db/Redis.py" />
@@ -179,13 +162,21 @@
         <option value="$PROJECT_DIR$/algorithm/BinarySearchTree.py" />
         <option value="$PROJECT_DIR$/algorithm/RedBlackTree.py" />
         <option value="$PROJECT_DIR$/algorithm/BTree.py" />
+        <option value="$PROJECT_DIR$/speed/speedtest.py" />
+        <option value="$PROJECT_DIR$/urllib_test.py" />
+        <option value="$PROJECT_DIR$/RegexPattern.py" />
+        <option value="$PROJECT_DIR$/sklearn.py" />
+        <option value="$PROJECT_DIR$/sklearn_test.py" />
+        <option value="/usr/local/lib/python2.7/dist-packages/Cython/Includes/libc/stdlib.pxd" />
+        <option value="$PROJECT_DIR$/cython/cimport.pyx" />
+        <option value="$PROJECT_DIR$/network/youdao.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="48" />
+    <option name="x" value="64" />
     <option name="y" value="-4" />
-    <option name="width" value="1873" />
+    <option name="width" value="1857" />
     <option name="height" value="1085" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -214,20 +205,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="Learning">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -246,18 +223,18 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
           <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Learning" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Learning" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="algorithm" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            <PATH_ELEMENT USER_OBJECT="Learning">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -267,10 +244,10 @@
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="recentsLimit" value="5" />
+    <property name="options.lastSelected" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../gae/CA/Dictionary" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../gae/gdictchinese" />
     <property name="FullScreen" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html" />
     <property name="options.searchVisible" value="true" />
@@ -286,119 +263,110 @@
       <recent name="$PROJECT_DIR$/cython/numpy_cython" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/speed" />
+      <recent name="$PROJECT_DIR$/network" />
+      <recent name="$PROJECT_DIR$/ML" />
       <recent name="$PROJECT_DIR$/db" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.BTree">
-    <configuration default="false" name="BinarySearchTree" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.youdao">
+    <configuration default="false" name="RegexPattern" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="/usr/bin/python2.7" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/algorithm" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Learning" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/algorithm/BinarySearchTree.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/RegexPattern.py" />
       <option name="PARAMETERS" value="" />
       <RunnerSettings RunnerId="PythonRunner" />
       <ConfigurationWrapper RunnerId="PythonRunner" />
       <method />
     </configuration>
-    <configuration default="false" name="RedBlackTree" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="urllib_test" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="/usr/bin/python2.7" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/algorithm" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Learning" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/algorithm/RedBlackTree.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/network/urllib_test.py" />
       <option name="PARAMETERS" value="" />
       <RunnerSettings RunnerId="PythonRunner" />
       <ConfigurationWrapper RunnerId="PythonRunner" />
       <method />
     </configuration>
-    <configuration default="false" name="Unittest BPlusTreeTests.test_bulkload" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="Unittests in $PROJECT_DIR$" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/algorithm" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Learning" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/algorithm/BTree.py" />
-      <option name="CLASS_NAME" value="BPlusTreeTests" />
-      <option name="METHOD_NAME" value="test_bulkload" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_METHOD" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PUREUNITTEST" value="true" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
-      <RunnerSettings RunnerId="PythonRunner" />
-      <ConfigurationWrapper RunnerId="PythonRunner" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Unittests in BTree" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/algorithm" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Learning" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/algorithm/BTree.py" />
+      <option name="SCRIPT_NAME" value="" />
       <option name="CLASS_NAME" value="" />
       <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="FOLDER_NAME" value="$PROJECT_DIR$" />
+      <option name="TEST_TYPE" value="TEST_FOLDER" />
       <option name="PATTERN" value="" />
       <option name="USE_PATTERN" value="false" />
       <option name="PUREUNITTEST" value="true" />
       <option name="PARAMS" value="" />
       <option name="USE_PARAM" value="false" />
-      <RunnerSettings RunnerId="PyDebugRunner" />
-      <RunnerSettings RunnerId="PythonRunner" />
-      <ConfigurationWrapper RunnerId="PyDebugRunner" />
-      <ConfigurationWrapper RunnerId="PythonRunner" />
       <method />
     </configuration>
-    <configuration default="false" name="BTree" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="sklearn" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="/usr/bin/python2.7" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/algorithm" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Learning" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/algorithm/BTree.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ML/sklearn_test.py" />
       <option name="PARAMETERS" value="" />
-      <RunnerSettings RunnerId="PyDebugRunner" />
       <RunnerSettings RunnerId="PythonRunner" />
-      <ConfigurationWrapper RunnerId="PyDebugRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="youdao" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/usr/bin/python2.7" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/network" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Learning" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/network/youdao.py" />
+      <option name="PARAMETERS" value="" />
+      <RunnerSettings RunnerId="PythonRunner" />
       <ConfigurationWrapper RunnerId="PythonRunner" />
       <method />
     </configuration>
@@ -565,7 +533,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Learning" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/multicore.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/speed/multicore.py" />
       <option name="PARAMETERS" value="" />
       <RunnerSettings RunnerId="PythonRunner" />
       <ConfigurationWrapper RunnerId="PythonRunner" />
@@ -615,19 +583,19 @@
       <item index="0" class="java.lang.String" itemvalue="Python.multicore" />
       <item index="1" class="java.lang.String" itemvalue="Python.docopt" />
       <item index="2" class="java.lang.String" itemvalue="Python.TestAnalysis" />
-      <item index="3" class="java.lang.String" itemvalue="Python.BinarySearchTree" />
-      <item index="4" class="java.lang.String" itemvalue="Python.RedBlackTree" />
-      <item index="5" class="java.lang.String" itemvalue="Python tests.Unittest BPlusTreeTests.test_bulkload" />
-      <item index="6" class="java.lang.String" itemvalue="Python tests.Unittests in BTree" />
-      <item index="7" class="java.lang.String" itemvalue="Python.BTree" />
+      <item index="3" class="java.lang.String" itemvalue="Python.RegexPattern" />
+      <item index="4" class="java.lang.String" itemvalue="Python.urllib_test" />
+      <item index="5" class="java.lang.String" itemvalue="Python tests.Unittests in /data/Dropbox/python/Learning" />
+      <item index="6" class="java.lang.String" itemvalue="Python.sklearn" />
+      <item index="7" class="java.lang.String" itemvalue="Python.youdao" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.BTree" />
-        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in BTree" />
-        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittest BPlusTreeTests.test_bulkload" />
-        <item index="3" class="java.lang.String" itemvalue="Python.RedBlackTree" />
-        <item index="4" class="java.lang.String" itemvalue="Python.BinarySearchTree" />
+        <item index="0" class="java.lang.String" itemvalue="Python.youdao" />
+        <item index="1" class="java.lang.String" itemvalue="Python.sklearn" />
+        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in /data/Dropbox/python/Learning" />
+        <item index="3" class="java.lang.String" itemvalue="Python.urllib_test" />
+        <item index="4" class="java.lang.String" itemvalue="Python.RegexPattern" />
       </list>
     </recent_temporary>
   </component>
@@ -679,20 +647,20 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="48" y="-4" width="1873" height="1085" extended-state="6" />
+    <frame x="64" y="-4" width="1857" height="1085" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23743315" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18074866" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32834226" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32938188" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24711697" sideWeight="0.515508" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24711697" sideWeight="0.48449197" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290859" sideWeight="0.7176471" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22353937" sideWeight="0.51450384" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15734072" sideWeight="0.81925136" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39679146" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24711697" sideWeight="0.31016043" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3279743" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28663102" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19866444" sideWeight="0.21633554" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3279743" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28091604" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977098" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32994652" sideWeight="0.67025864" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -733,111 +701,106 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/postSimpleHTTPServer.py">
+    <entry file="file://$PROJECT_DIR$/cython/scipy2013-cython-tutorial-master/demo/fib/fib.pyx">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1020" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flaskServer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="8" selection-start="192" selection-end="192" vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="585" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sendemail.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/multicore2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="365" selection-end="365" vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="300" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/multicore3.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="356" selection-end="356" vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="300" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/multicore1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="360" selection-end="360" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="300">
+        <state line="5" column="12" selection-start="110" selection-end="110" vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="180">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/Redis.py">
+    <entry file="file://$PROJECT_DIR$/cython/scipy2013-cython-tutorial-master/demo/wrap-c-time/time_extern.pyx">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="12" selection-start="155" selection-end="155" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="195">
+        <state line="21" column="0" selection-start="417" selection-end="417" vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="405">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client.py">
+    <entry file="file:///usr/local/lib/python2.7/dist-packages/sklearn/feature_extraction/text.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="100" selection-end="100" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="300">
+        <state line="775" column="28" selection-start="30026" selection-end="30026" vertical-scroll-proportion="0.0" vertical-offset="10976" max-vertical-offset="18390" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RegexPattern.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="30" selection-start="725" selection-end="725" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="615" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/network/urllib_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="15" selection-start="250" selection-end="250" vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="585" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/network/client.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="0" selection-start="100" selection-end="100" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="300" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cython/scipy2013-cython-tutorial-master/test_cython/test-cython.ipynb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="7" selection-start="228" selection-end="228" vertical-scroll-proportion="0.3043478" vertical-offset="0" max-vertical-offset="1620" />
+      </provider>
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cython/fib.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="12" selection-start="264" selection-end="264" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="270">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docopt_test.py">
+    <entry file="file://$PROJECT_DIR$/cython/scipy2013-cython-tutorial-master/blog-post/cython-tutorial.rst">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="0" selection-start="1496" selection-end="1496" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
+        <state line="16" column="0" selection-start="906" selection-end="906" vertical-scroll-proportion="0.0" vertical-offset="923" max-vertical-offset="1665" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cython/scipy2013-cython-tutorial-master/test_cython/test_pyximport.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="18" selection-start="153" selection-end="153" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="165">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/ndb.py">
+    <entry file="file://$PROJECT_DIR$/cython/scipy2013-cython-tutorial-master/test_cython/test_cython.pyx">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1065">
+        <state line="20" column="0" selection-start="400" selection-end="400" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="390">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/algorithm/BinarySearchTree.py">
+    <entry file="file://$PROJECT_DIR$/cython/scipy2013-cython-tutorial-master/demo/fib/setup.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="180" column="26" selection-start="3776" selection-end="3776" vertical-scroll-proportion="0.0" vertical-offset="2107" max-vertical-offset="2745">
+        <state line="17" column="1" selection-start="528" selection-end="528" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/algorithm/23tree.py">
+    <entry file="file://$PROJECT_DIR$/cython/scipy2013-cython-tutorial-master/demo/fib/fib.pyx">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="75" selection-end="75" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="165">
+        <state line="5" column="12" selection-start="110" selection-end="110" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/urllib_test.py">
+    <entry file="file://$PROJECT_DIR$/cython/scipy2013-cython-tutorial-master/demo/wrap-c-time/time_extern.pyx">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="34" selection-start="623" selection-end="623" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="585">
+        <state line="21" column="0" selection-start="417" selection-end="417" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="405">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/algorithm/RedBlackTree.py">
+    <entry file="file://$PROJECT_DIR$/cython/cimport.pyx">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="216" column="34" selection-start="4235" selection-end="4235" vertical-scroll-proportion="0.0" vertical-offset="2557" max-vertical-offset="3390">
-          <folding>
-            <element signature="e#0#142#1" expanded="true" />
-            <element signature="e#3847#3890#1" expanded="true" />
-          </folding>
+        <state line="2" column="0" selection-start="55" selection-end="108" vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="240">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/algorithm/BTree.py">
+    <entry file="file://$PROJECT_DIR$/network/youdao.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="313" column="41" selection-start="9458" selection-end="9458" vertical-scroll-proportion="0.4701835" vertical-offset="3790" max-vertical-offset="8820">
-          <folding>
-            <element signature="e#0#8#1" expanded="true" />
-            <element signature="e#33#46#0" expanded="true" />
-            <element signature="e#3935#5356#0" expanded="false" />
-            <element signature="e#8293#8306#1" expanded="true" />
-          </folding>
+        <state line="58" column="18" selection-start="1244" selection-end="1244" vertical-scroll-proportion="0.37921348" vertical-offset="570" max-vertical-offset="1920">
+          <folding />
         </state>
       </provider>
     </entry>

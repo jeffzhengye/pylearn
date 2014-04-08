@@ -9,7 +9,7 @@ def testDownload():
     f = urllib.urlopen(url)
     content = f.read()
     print content
-    f.close();
+    f.close()
 
 
 def batch_down_from_ozdic():

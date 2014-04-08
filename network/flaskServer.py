@@ -1,5 +1,4 @@
-import flaskTest, flaskTest.views
-import os
+from network import flaskTest
 
 app = flaskTest.Flask(__name__)
 
