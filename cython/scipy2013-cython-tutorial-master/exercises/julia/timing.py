@@ -7,7 +7,7 @@ def main(args):
     if suffix in ('so', 'pyd', 'pyx'):
         utils.compiler(args.setup)
     compute_julia = utils.importer(args.module, args.function)
-    jla, time = compute_julia(args.cr, args.ci, args.N, 2.0, 4., args.cutoff)
+    jla, time = compute_julia(args.cr, args.ci, int(args.N), 2.0, 4., args.cutoff)
     print "Compute time: %fs" % time
     #pl.imshow(np.log(jla), cmap=pl.cm.hot)
     #pl.show()

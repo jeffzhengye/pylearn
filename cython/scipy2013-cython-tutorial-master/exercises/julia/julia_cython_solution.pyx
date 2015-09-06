@@ -10,11 +10,14 @@
 # --- Python std lib imports -------------------------------------------------
 from time import time
 import numpy as np
+cimport numpy as np
 
 # --- Cython cimports --------------------------------------------------------
 cimport cython
 from libc.stdint cimport uint32_t, int32_t
 from cython.parallel cimport prange
+from cython import parallel
+# from libcpp.vector cimport vector
 
 # --- Ctypedefs --------------------------------------------------------
 ctypedef float     real_t
@@ -70,12 +73,21 @@ def compute_julia_parallel(real_t cr, real_t ci,
         real_t[::1] grid
         int_t i, j
         real_t x
+        int_t[::1] threads
+    cdef int current_thread_id
+    
+    threads = np.ones(N, np.int32)
 
     julia = np.empty((N, N), dtype=np.uint32)
     grid = np.asarray(np.linspace(-bound, bound, N), dtype=np.float32)
     t0 = time()
-    for i in prange(N, nogil=True):
+    for i in prange(N, nogil=True, num_threads=6):
+        current_thread_id = parallel.threadid()
+        threads[i] = current_thread_id ## why not using multithread? 
         x = grid[i]
         for j in range(N):
             julia[i,j] = kernel(x, grid[j], cr, ci, lim, cutoff)
+    for i in range(N):
+        print threads[i]
+
     return julia, time() - t0
