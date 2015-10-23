@@ -1,27 +1,40 @@
+try:
+    import cPickle as pickle
+except:
+    import pickle
+import zlib
+import gzip
+
 __author__ = 'zheng'
 
-import numpy
-import cPickle
 
-z = numpy.zeros(1000, numpy.uint8)
-print len(z.dumps())
-print len(cPickle.dumps(z.dumps()))
-
-import zlib, cPickle
-
-def zdumps(obj):
-  return zlib.compress(cPickle.dumps(obj,cPickle.HIGHEST_PROTOCOL),9)
-
-def zloads(zstr):
-  return cPickle.loads(zlib.decompress(zstr))
+def zlib_dumps(obj):
+    return zlib.compress(pickle.dumps(obj, pickle.HIGHEST_PROTOCOL), 9)
 
 
-print len(zdumps(z))
+def zlib_loads(zstr):
+    return pickle.loads(zlib.decompress(zstr))
 
-def pickle(fname, obj):
-    import cPickle, gzip
-    cPickle.dump(obj=obj, file=gzip.open(fname, "wb", compresslevel=3), protocol=2)
 
-def unpickle(fname):
-    import cPickle, gzip
-    return cPickle.load(gzip.open(fname, "rb"))
+def gzip_pickle(fname, obj, compresslevel=9):
+    pickle.dump(obj=obj, file=gzip.open(fname, "wb", compresslevel=compresslevel), protocol=2)
+
+
+def gzip_unpickle(fname):
+    return pickle.load(gzip.open(fname, "rb"))
+
+
+def test():
+    import numpy
+    import os
+    tmp_file = "tmp_test.zippkl"
+    z = numpy.random.ranf((1000, 2000))
+    print len(z.dumps())
+    print len(pickle.dumps(z.dumps()))
+    print len(zlib_dumps(z))
+
+    gzip_pickle(tmp_file, z)
+    print os.path.getsize(tmp_file)
+
+if __name__ == '__main__':
+    test()
