@@ -105,8 +105,62 @@ def concatenate():
     f = theano.function(inputs=[Y], outputs=z)
     print f(input)
 
+
+def arg_sort():
+    a, b, c = 2, 4, 4
+    input = np.arange(a*b*c).reshape([a, b, c]).astype('float32')
+    print input
+    print
+    x = T.tensor3()
+    z = T.argsort(x, axis=2)[:, :, :2].astype('int64')
+    z = x[z[0].flatten()]
+    # z = x[T.arange(x.shape[0], dtype='int32'), T.arange(x.shape[1], dtype='int32'), z]
+    f = theano.function(inputs=[x], outputs=z)
+    print f(input)
+
+
+def t_grad():
+    x = T.matrix()
+    y = T.mean(T.sum(x, axis=1))
+    z = T.grad(y, x)
+
+    print type(y)
+
+
+def test_cache():
+    from keras.layers.core import Dense
+    from theano import pp, function
+    from theano import config
+    import cPickle as pkl
+    # Theano configuration
+    config.optimizer = 'fast_run'
+
+    X = T.matrix()
+    d = Dense(200, input_dim=1000)
+    # d1 = Dense(200, input_dim=1000)
+    d.build()
+    Y = d(X) + d(X)
+    z = d(X)
+    Y1 = z + z
+    f = function([X], Y)
+    f1 = function([X], Y1)
+    # print pp(Y)
+    # print pp(f.maker.fgraph.outputs[0])
+    print theano.printing.debugprint(f)
+    print
+    print theano.printing.debugprint(f1)
+    print
+    print theano.printing.debugprint(z)
+
+    pkl.dump(f, open('test.pkl', 'wb'))
+    pkl.dump(f1, open('test1.pkl', 'wb'))
+
+
 if __name__ == '__main__':
     # linear_combine()
     # linear_combine_shared()
     # weighting1()
-    concatenate()
+    # concatenate()
+    # arg_sort()
+    # t_grad()
+    test_cache()
