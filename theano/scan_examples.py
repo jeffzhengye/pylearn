@@ -48,7 +48,22 @@ def scan_util():
     print f(45)
 
 
+def scan_with_output():
+    def _step(x, y, z):
+        return x + y + z, y+z
+    k = T.vector("k", dtype='float64')
+    a = T.vector('a', dtype='float64')
+    o = theano.shared(value=np.asarray(0, dtype='float64'), strict=False)
+    results, _ = theano.scan(
+        _step,
+        sequences=[a, k],
+        outputs_info=[None, o])
+
+    f = theano.function([a, k], outputs=results)
+    print(f(np.arange(10), np.arange(10)))
+
 if __name__ == "__main__":
     # scan_matrix()
-    scan_tensor3()
+    # scan_tensor3()
     # scan_util()
+    scan_with_output()

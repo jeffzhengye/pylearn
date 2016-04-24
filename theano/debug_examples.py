@@ -1,5 +1,7 @@
 import theano
 import numpy
+import numpy as np
+from theano import tensor as T
 
 __author__ = 'Jeff Ye'
 
@@ -9,6 +11,7 @@ def print_ndarray_shape():
     this shows how to print ndarray shape as well as the change before and after executing the function.
     link: http://deeplearning.net/software/theano/tutorial/debug_faq.html#how-do-i-print-an-intermediate-value-in-a-function-method
     """
+
     def inspect_inputs(i, node, fn):
         print i, node, "\ninput(s) value(s):", [input[0].shape for input in fn.inputs],
 
@@ -39,5 +42,24 @@ def print_detect_nan():
                             post_func=detect_nan))
     f(0)  # log(0) * 0 = -inf * 0 = NaN
 
+
+def test_value():
+    from keras.layers.core import Dense
+    from theano import pp, function
+    theano.config.compute_test_value = 'warn'
+
+    # since the test input value is not aligned with the requirement in Dense,
+    # it will report error quickly. Change 100 to 1000 will be fine.
+    t_value = np.zeros((500, 1000), dtype=np.float32)
+    X = T.matrix()
+    X.tag.test_value = t_value
+    d = Dense(200, input_dim=1000)
+    # d1 = Dense(200, input_dim=1000)
+    d.build()
+    z = d(X)
+    f = function([X], z)
+    # turn it off after
+    theano.config.compute_test_value = 'off'
+
 if __name__ == "__main__":
-    print_ndarray_shape()
+    test_value()
