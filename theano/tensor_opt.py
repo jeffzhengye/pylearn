@@ -1,5 +1,6 @@
 import theano
 from theano import tensor as T
+import theano.tensor
 import numpy as np
 
 x = T.fmatrix('x')
@@ -109,14 +110,15 @@ def concatenate():
 def arg_sort():
     a, b, c = 2, 4, 4
     input = np.arange(a*b*c).reshape([a, b, c]).astype('float32')
-    print input
+    # print input
     print
     x = T.tensor3()
     z = T.argsort(x, axis=2)[:, :, :2].astype('int64')
+    z = theano.printing.Print("z")(z)
     z = x[z[0].flatten()]
     # z = x[T.arange(x.shape[0], dtype='int32'), T.arange(x.shape[1], dtype='int32'), z]
     f = theano.function(inputs=[x], outputs=z)
-    print f(input)
+    r = f(input)
 
 
 def t_grad():
@@ -161,6 +163,6 @@ if __name__ == '__main__':
     # linear_combine_shared()
     # weighting1()
     # concatenate()
-    # arg_sort()
+    arg_sort()
     # t_grad()
-    test_cache()
+    # test_cache()

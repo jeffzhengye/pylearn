@@ -7,6 +7,9 @@
 # C extensions
 *.so
 
+# pickle
+*.pkl
+
 # Packages
 *.egg
 *.egg-info
