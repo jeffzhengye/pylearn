@@ -5,7 +5,7 @@ __author__ = 'jeffye'
 # https://github.com/tensorflow/fold/blob/master/tensorflow_fold/g3doc/blocks.md#using-tensorflow-tensors
 # boilerplate
 import random
-import tensorflow as tf
+import tensorflow_learning as tf
 
 sess = tf.InteractiveSession()
 import tensorflow_fold as td
