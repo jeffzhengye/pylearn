@@ -49,7 +49,8 @@ trainX = scipy.sparse.random(1024, 1024)
 weights = trainX
 # print(trainX[:2])
 # trainX.sort_indices()
-
+tf.sparse.SparseTensor
+tf.reduce_sum
 order = np.lexsort((weights.col, weights.row))
 sorted_weights = coo_matrix((weights.data[order], (weights.row[order], weights.col[order])),
                             shape=weights.shape)

@@ -90,6 +90,11 @@ output_types = [tf.int32] * 3
 output_shapes = dict([(k, tf.TensorShape((None, ))) for k in key])
 
 def arr2sparse(arr):
+    """
+    dense tensor to sparse tensor
+    :param arr:
+    :return:
+    """
     # arr_tensor = tf.constant(np.array(arr))
     arr_tensor = arr
     arr_idx = tf.where(tf.not_equal(arr_tensor, 0))
