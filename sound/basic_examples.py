@@ -1,9 +1,8 @@
 import soundfile as sf
 import numpy as np
 
-def read_wav():
-    data, samplerate = sf.read('BAC009S0747W0330.wav')
-    # data, samplerate = sf.read('tmp.wav')
+def read_wav(f):
+    data, samplerate = sf.read(f)
     print(data.shape, data.dtype, samplerate)
     print(data[-10:], np.sum(data))
 
@@ -17,5 +16,9 @@ def read_wav1():
         #     f.seek(pos)
         # #     f.write(data * 2)
 
+
+
 if __name__ == '__main__':
-    read_wav()
+    f = "/mnt/c/code/image/hedian-demo/data/audio/录音2021-11-21/1_20211121191238.wav"
+    # f = 'BAC009S0747W0330.wav'
+    read_wav(f)

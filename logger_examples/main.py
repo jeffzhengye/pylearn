@@ -8,8 +8,8 @@ import my_module
 
 # load the logging configuration
 
-logging.config.fileConfig('logging.ini')
-setup_logging()
+# logging.config.fileConfig('logging.ini')
+setup_logging(default_path='logging1.yaml')
 
 logger = logging.getLogger(__name__)
 my_module.foo()
