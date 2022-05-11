@@ -41,3 +41,7 @@ nosetests.xml
 .mr.developer.cfg
 .project
 .pydevproject
+
+# Project related
+.lsp_symlink/
+output_lstm
