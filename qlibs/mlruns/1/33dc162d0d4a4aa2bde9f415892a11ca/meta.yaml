@@ -1,0 +1,15 @@
+artifact_uri: file:///mnt/d/code/learn/pylearn/qlibs/mlruns/1/33dc162d0d4a4aa2bde9f415892a11ca/artifacts
+end_time: 1654414504872
+entry_point_name: ''
+experiment_id: '1'
+lifecycle_stage: active
+name: ''
+run_id: 33dc162d0d4a4aa2bde9f415892a11ca
+run_uuid: 33dc162d0d4a4aa2bde9f415892a11ca
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1654414500575
+status: 3
+tags: []
+user_id: jeffye
