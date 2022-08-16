@@ -46,3 +46,5 @@ nosetests.xml
 .lsp_symlink/
 output_lstm
 .vscode
+google_cloud/wget-log*
+qlibs/mlruns
