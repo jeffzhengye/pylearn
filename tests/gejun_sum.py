@@ -42,5 +42,5 @@ def sum_consecutives_corrected(s):
 
 if __name__ == '__main__':
     test_li = [-5, -5, 7, 7, 12, 0]  # should return [-10,14,12,0]
-    print sum_consecutives_corrected(test_li)
+    print(sum_consecutives_corrected(test_li))
 
