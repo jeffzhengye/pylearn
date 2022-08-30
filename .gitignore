@@ -48,3 +48,7 @@ output_lstm
 .vscode
 google_cloud/wget-log*
 qlibs/mlruns
+.virtual_documents
+node_modules
+yarn.lock
+home
