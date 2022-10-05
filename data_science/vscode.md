@@ -9,5 +9,7 @@
 | ctrl + shift + P | search all                              |
 | ctrl+P, ctrl+E   | search file by name                     |
 | ctrt+LeftArrow   | collapse outline                        |
+| ctrl + K + S      | keyboard shortcuts                      |
+| ctrl + R          | open recent workspace                  |
 
 - more: https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf
