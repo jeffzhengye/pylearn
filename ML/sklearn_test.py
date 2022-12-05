@@ -7,6 +7,7 @@ from sklearn.svm import LinearSVC
 from sklearn.feature_extraction.text import TfidfTransformer
 from sklearn.multiclass import OneVsRestClassifier
 
+
 X_train = np.array(["new york is a hell of a town",
                     "new york was originally dutch",
                     "the big apple is great",
@@ -35,4 +36,4 @@ classifier = Pipeline([
 classifier.fit(X_train, y_train)
 predicted = classifier.predict(X_test)
 for item, labels in zip(X_test, predicted):
-    print '%s => %s' % (item, ', '.join(target_names[x] for x in labels))
+    print('%s => %s' % (item, ', '.join(target_names[x] for x in labels)))
