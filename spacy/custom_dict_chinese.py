@@ -6,22 +6,22 @@ import spacy
 """
 
 
-def test_custom_dict():
+def test_custom_dict() -> None:
     nlp = spacy.load('zh_core_web_sm')
-    proper_nouns = ['给水流量', '蒸汽流量', '过热度', '主蒸汽']
+    proper_nouns: list[str] = ['给水流量', '蒸汽流量', '过热度', '主蒸汽']
     nlp.tokenizer.pkuseg_update_user_dict(proper_nouns)
 
     doc = nlp('调整给水，注意给水流量与蒸汽流量相匹配，注意过热度，保证主蒸汽温度不超限。')
     print('/'.join([t.text for t in doc]))
 
 
-def test_switch_segmenter():
+def test_switch_segmenter() -> None:
     """
     2. 如何设置default segmenter
     :return:
     """
     from spacy.lang.zh import Chinese
-    s = '调整给水，注意给水流量与蒸汽流量相匹配，注意过热度，保证主蒸汽温度不超限。This is not perfect'
+    s: str = '调整给水，注意给水流量与蒸汽流量相匹配，注意过热度，保证主蒸汽温度不超限。This is not perfect'
     # Character segmentation (default)
     nlp = Chinese()
     # char
