@@ -44,7 +44,6 @@ nosetests.xml
 
 # Project related
 .lsp_symlink/
-output_lstm
 .vscode
 google_cloud/wget-log*
 qlibs/mlruns

@@ -13,3 +13,41 @@
 | ctrl + R         | open recent workspace                   |
 
 - more: https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf
+
+
+# vscode
+
+## set PYTHONPATH
+
+### 方法1
+
+- launch.json 中设置
+
+```
+"configurations": [
+        {
+            "name": "main: debug, env-dev",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "cwd": "${workspaceFolder}/rule_based_nlu",
+            "env": {
+                "CONTENT_API_ENV": "dev",
+                "PYTHONPATH": "${workspaceFolder}:${env:PYTHONPATH}"
+            },
+            "envFile": "${workspaceFolder}/.env"
+        }
+]
+```
+
+### 方法2
+
+- 通过envFile设置PYTHONPATH
+- 在launch.json 里面configurations 中设置 envFile, 如上。但最好修改默认名称，免得被扫描
+
+### 方法3
+
+- "terminal.integrated.env.windows": {"PYTHONPATH": "${workspaceFold}:${env:PYTHONPATH}"}
+- 在settings.json 中设置，但只能在vscode 系统集成的terminal中生效。

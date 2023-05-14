@@ -5,7 +5,7 @@ import torch
 tokenizer = LLaMATokenizer.from_pretrained("decapoda-research/llama-7b-hf")
 model = LLaMAForCausalLM.from_pretrained(
     "decapoda-research/llama-7b-hf",
-    load_in_8bit=True,
+    load_in_8bit=False,
     device_map="auto",
     torch_dtype=torch.float16
 )
@@ -45,7 +45,7 @@ def generate_prompt(instruction, input=None):
 ### Resposta:"""
 
 generation_config = GenerationConfig(
-    temperature=0.2,
+    temperature=0.8,
     top_p=0.75,
     num_beams=1,
     top_k=20
