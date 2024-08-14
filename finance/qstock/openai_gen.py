@@ -1,8 +1,6 @@
 import openai
 from retrying import retry
 
-openai.api_key = ""
-
 @retry(stop_max_attempt_number=10, wait_fixed=1000 * 10)
 def chat_openai(message: str):
     """docs: https://platform.openai.com/docs/api-reference/chat/create?lang=python
