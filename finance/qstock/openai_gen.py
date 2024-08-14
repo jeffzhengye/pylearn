@@ -1,7 +1,7 @@
 import openai
 from retrying import retry
 
-openai.api_key = "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"
+openai.api_key = ""
 
 @retry(stop_max_attempt_number=10, wait_fixed=1000 * 10)
 def chat_openai(message: str):
