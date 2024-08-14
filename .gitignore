@@ -9,10 +9,17 @@
 
 # pickle
 *.pkl
+*.pt
+*.avi
+*.mp4
+
+# large file
+data_science/data.csv
 
 # Packages
 *.egg
 *.egg-info
+*.mp4
 dist
 build
 eggs
@@ -28,6 +35,7 @@ __pycache__
 
 # Installer logs
 pip-log.txt
+*.log
 
 # Unit test / coverage reports
 .coverage
