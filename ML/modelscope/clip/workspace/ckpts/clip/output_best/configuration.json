@@ -1,0 +1,93 @@
+{
+    "framework": "pytorch",
+    "task": "multi-modal-embedding",
+    "pipeline": {
+        "type": "multi-modal-embedding"
+    },
+    "pretrained_model": {
+        "model_name": "damo/multi-modal_clip-vit-base-patch16_zh"
+    },
+    "dataset": {
+        "column_map": {
+            "img": "image",
+            "text": "query"
+        }
+    },
+    "train": {
+        "work_dir": "./workspace/ckpts/clip",
+        "max_epochs": 1,
+        "use_fp16": true,
+        "dataloader": {
+            "batch_size_per_gpu": 180,
+            "workers_per_gpu": 0,
+            "shuffle": true,
+            "drop_last": true
+        },
+        "lr_scheduler": {
+            "warmup_proportion": 0.1
+        },
+        "lr_scheduler_hook": {
+            "type": "LrSchedulerHook",
+            "by_epoch": false
+        },
+        "optimizer": {
+            "type": "AdamW"
+        },
+        "optimizer_hparams": {
+            "lr": 2.5e-05,
+            "weight_decay": 0.001,
+            "beta1": 0.9,
+            "beta2": 0.999,
+            "eps": 1e-08
+        },
+        "optimizer_hook": {
+            "cumulative_iters": 1,
+            "loss_keys": "loss"
+        },
+        "loss_cfg": {
+            "aggregate": true
+        },
+        "hooks": [
+            {
+                "type": "IterTimerHook"
+            },
+            {
+                "type": "ClipClampLogitScaleHook"
+            }
+        ],
+        "logging": {
+            "interval": 1,
+            "out_dir": "./workspace/ckpts/clip"
+        },
+        "checkpoint": {
+            "best": {
+                "metric_key": "inbatch_t2i_recall_at_1",
+                "by_epoch": false,
+                "interval": 200,
+                "save_dir": "./workspace/ckpts/clip"
+            },
+            "period": {
+                "interval": 1,
+                "save_dir": "./workspace/ckpts/clip"
+            }
+        }
+    },
+    "evaluation": {
+        "dataloader": {
+            "batch_size_per_gpu": 128,
+            "workers_per_gpu": 16,
+            "shuffle": false,
+            "drop_last": true
+        },
+        "metrics": [
+            {
+                "type": "inbatch_recall"
+            }
+        ],
+        "period": {
+            "by_epoch": true,
+            "interval": 1
+        }
+    },
+    "preprocessor": []
+}
