@@ -86,6 +86,15 @@ We see an accuracy increase of over 6 p.p. when fine-tuning the model and this i
   - 个人偏向：结果呈现时直接给出具体数据。例如：We use a test set annotated by academic researchers in the fields of quantum physics and computer vision to evaluate our system’s performance. The results show that DocReLM achieves a Top 10 accuracy of 44.12% in computer vision, compared to Google Scholar’s 15.69%, and an increase to 36.21% in quantum physics, while that of Google Scholar is 12.96%.
   -
 
+### 引出你做的事
+
+- However, despite
+the success of foundation models in modalities
+such as natural language processing and computer
+vision, the development of foundation models for
+time series forecasting has lagged behind. We
+present Lag-Llama, a general-purpose foundation model for univariate probabilistic time series forecasting based on a decoder-only transformer architecture that uses lags as covariates.
+
 ## Introduction
 
 - 研究的问题是什么，为什么重要。
@@ -139,6 +148,8 @@ We see an accuracy increase of over 6 p.p. when fine-tuning the model and this i
 
 - are llms all you need for TOD
   ![alt text](image-2.png)
+
+- itransformer
 
 ## Experiments
 
@@ -194,3 +205,10 @@ We see an accuracy increase of over 6 p.p. when fine-tuning the model and this i
 
 - ![alt text](image-4.png)
 - from: More Room for Language: Investigating the Effect of Retrieval on Language Models
+
+
+# tools
+
+## polish
+
+* <https://www.citexs.com/Editing>
