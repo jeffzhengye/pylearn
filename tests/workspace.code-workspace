@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../../image/hedian-demo"
+		},
+		{
+			"path": "../../../quant/qlib"
+		}
+	],
+	"settings": {
+		"git.ignoreLimitWarning": true
+	}
+}
