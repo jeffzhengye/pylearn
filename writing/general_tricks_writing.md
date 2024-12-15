@@ -4,7 +4,7 @@
 
 - 想法简单，但是可能具体实现有很多困难。
 
-  - In this way, it is able to better learn the similarity relations among query, positive passages and negative passages. Although the idea is appealing, it is not easy to implement due to three major issues. First, it is unclear how to formalize and learn both query-centric and passage-centric similarity relations. Second, it requires arge-scale and highquality training data to incorporate passage-centric similarity relation. However, it is expensive to manually label data. Additionally, there might be a large number of unlabeled positives even in the existing manually labeled datasets (Qu et al., 2020), and it is likely to bring false negatives when sampling hard negatives. Finally, learning passagecentric similarity relation (an auxiliary task) is not directly related to the query-centric similarity relation (a target task). In terms of multi-task viewpoint, multi-task models often perform worse than their single-task counterparts (Alonso and Plank, 2017; McCann et al., 2018; Clark et al., 2019). Hence, it needs a more elaborate design for the training procedure.
+  - In this **way**, it is able to better learn the similarity relations among query, positive passages and negative passages. Although the idea is appealing, it is not easy to implement due to three major issues. First, it is unclear how to formalize and learn both query-centric and passage-centric similarity relations. Second, it requires arge-scale and highquality training data to incorporate passage-centric similarity relation. However, it is expensive to manually label data. Additionally, there might be a large number of unlabeled positives even in the existing manually labeled datasets (Qu et al., 2020), and it is likely to bring false negatives when sampling hard negatives. Finally, learning passagecentric similarity relation (an auxiliary task) is not directly related to the query-centric similarity relation (a target task). In terms of multi-task viewpoint, multi-task models often perform worse than their single-task counterparts (Alonso and Plank, 2017; McCann et al., 2018; Clark et al., 2019). Hence, it needs a more elaborate design for the training procedure.
   - To this end, in this paper, we propose a novel approach that leverages both query-centric and PAssage-centric sImilarity Relations (called PAIR) for dense passage retrieval. In order to address the aforementioned issues, we have made three important technical contributions. First,
   - 这个范例很好的展示这种情况怎么写。重点说明为什么不好实现或中间具体的困难在哪里，不然的话如果真的那么容易文章就没那么大价值了，谁都可以做吗。避免审稿时，审稿人可能一看可能觉得这个好像也大的创新。
 
@@ -68,6 +68,12 @@ We see an accuracy increase of over 6 p.p. when fine-tuning the model and this i
 - Retrieve Anything To Augment Large Language Models
   - Training such a unified model is non-trivial, as various retrieval tasks aim to capture distinct semantic relationships, often subject to mutual interference. To address this challenge, we systematically optimize our training methodology. This includes reward formulation based on LLMs’ feedback, the stabilization of knowledge distillation, multi-task fine-tuning with explicit instructions, and homogeneous in-batch negative sampling.
 
+## fair comparison and result fluctuation
+
+* For a fair comparison with our proposed system with previous systems, we re-implemented the onsets and frames system trained with hard labels of 0 and 1. The results are shown in the third row of Table I. The numbers of our re-implemented
+system are slightly different from [25] due to different data augmentation strategies, different data pre-processing, data
+post-processing strategies, and deep learning toolkits.
+
 ## others
 
 - The challenges faced by RAG systems, such as ensuring contextually appropriate and up-to-date data, are addressed by the dynamic nature of knowledge graphs.
@@ -84,7 +90,9 @@ We see an accuracy increase of over 6 p.p. when fine-tuning the model and this i
 - 4. 实验结果是什么？结论是什么？有什么重要/有趣的发现。
   - 例如在 xx 最有代表性的数据集上，比 SOTA 在那些点上还好。
   - 个人偏向：结果呈现时直接给出具体数据。例如：We use a test set annotated by academic researchers in the fields of quantum physics and computer vision to evaluate our system’s performance. The results show that DocReLM achieves a Top 10 accuracy of 44.12% in computer vision, compared to Google Scholar’s 15.69%, and an increase to 36.21% in quantum physics, while that of Google Scholar is 12.96%.
-  -
+  - Application of frozen large-scale models to multimodal task-oriented dialogue: The results show that using large-scale models with fixed parameters rather than using models trained on a dataset from scratch improves performance in multimodal task-oriented dialogues. At the same time, we show that Large Language Models (LLMs) are effective
+for multimodal task-oriented dialogues. This is expected to lead to efficient applications to existing systems.
+
 
 ### 引出你做的事
 
