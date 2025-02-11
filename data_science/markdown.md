@@ -1,13 +1,13 @@
-# tutorial
+# syntax tutorial
 
 * https://www.markdownguide.org/basic-syntax/
 
-# color
+## color
 
 * <font color="red">red</font>
 * <span style="color:red">这是红色文本</span>
 
-# highlight
+## highlight
 
 * <span style="background-color:yellow">这是黄色背景</span>
 
@@ -21,3 +21,8 @@
 # html to markdown 
 
 * 用ai模型： Reader-LM 
+
+# pdf, word to markdown
+
+* Python tool for converting files and office documents to Markdown.
+* https://github.com/microsoft/markitdown
