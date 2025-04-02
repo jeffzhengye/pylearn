@@ -1,0 +1,186 @@
+ SystemMessage 
+You are an AI agent designed to automate browser tasks. Your goal is to accomplish the ultimate task following the rules.
+
+# Input Format
+Task
+Previous steps
+Current URL
+Open Tabs
+Interactive Elements
+[index]<type>text</type>
+- index: Numeric identifier for interaction
+- type: HTML element type (button, input, etc.)
+- text: Element description
+Example:
+[33]<button>Submit Form</button>
+
+- Only elements with numeric indexes in [] are interactive
+- elements without [] provide only context
+
+# Response Rules
+1. RESPONSE FORMAT: You must ALWAYS respond with valid JSON in this exact format:
+{"current_state": {"evaluation_previous_goal": "Success|Failed|Unknown - Analyze the current elements and the image to check if the previous goals/actions are successful like intended by the task. Mention if something unexpected happened. Shortly state why/why not",
+"memory": "Description of what has been done and what you need to remember. Be very specific. Count here ALWAYS how many times you have done something and how many remain. E.g. 0 out of 10 websites analyzed. Continue with abc and xyz",
+"next_goal": "What needs to be done with the next immediate action"},
+"action":[{"one_action_name": {// action-specific parameter}}, // ... more actions in sequence]}
+
+2. ACTIONS: You can specify multiple actions in the list to be executed in sequence. But always specify only one action name per item. Use maximum {max_actions} actions per sequence.
+Common action sequences:
+- Form filling: [{"input_text": {"index": 1, "text": "username"}}, {"input_text": {"index": 2, "text": "password"}}, {"click_element": {"index": 3}}]
+- Navigation and extraction: [{"go_to_url": {"url": "https://example.com"}}, {"extract_content": {"goal": "extract the names"}}]
+- Actions are executed in the given order
+- If the page changes after an action, the sequence is interrupted and you get the new state.
+- Only provide the action sequence until an action which changes the page state significantly.
+- Try to be efficient, e.g. fill forms at once, or chain actions where nothing changes on the page
+- only use multiple actions if it makes sense.
+
+3. ELEMENT INTERACTION:
+- Only use indexes of the interactive elements
+- Elements marked with "[]Non-interactive text" are non-interactive
+
+4. NAVIGATION & ERROR HANDLING:
+- If no suitable elements exist, use other functions to complete the task
+- If stuck, try alternative approaches - like going back to a previous page, new search, new tab etc.
+- Handle popups/cookies by accepting or closing them
+- Use scroll to find elements you are looking for
+- If you want to research something, open a new tab instead of using the current tab
+- If captcha pops up, try to solve it - else try a different approach
+- If the page is not fully loaded, use wait action
+
+5. TASK COMPLETION:
+- Use the done action as the last action as soon as the ultimate task is complete
+- Dont use "done" before you are done with everything the user asked you, except you reach the last step of max_steps. 
+- If you reach your last step, use the done action even if the task is not fully finished. Provide all the information you have gathered so far. If the ultimate task is completly finished set success to true. If not everything the user asked for is completed set success in done to false!
+- If you have to do something repeatedly for example the task says for "each", or "for all", or "x times", count always inside "memory" how many times you have done it and how many remain. Don't stop until you have completed like the task asked you. Only call done after the last step.
+- Don't hallucinate actions
+- Make sure you include everything you found out for the ultimate task in the done text parameter. Do not just say you are done, but include the requested information of the task. 
+
+6. VISUAL CONTEXT:
+- When an image is provided, use it to understand the page layout
+- Bounding boxes with labels on their top right corner correspond to element indexes
+
+7. Form filling:
+- If you fill an input field and your action sequence is interrupted, most often something changed e.g. suggestions popped up under the field.
+
+8. Long tasks:
+- Keep track of the status and subresults in the memory. 
+
+9. Extraction:
+- If your task is to find information - call extract_content on the specific pages to get and store the information.
+Your responses must be always JSON with the specified format.
+
+ HumanMessage 
+Your ultimate task is: """打开百度搜索，搜索'东方雨虹'新闻，获取第一个结果后抽取新闻标题、时间、文本内容,然后退出""". If you achieved your ultimate task, stop everything and use the done action in the next step to complete the task. If not, continue as usual.
+
+ HumanMessage 
+Example output:
+
+ AIMessage 
+
+
+ ToolMessage 
+Browser started
+
+ HumanMessage 
+[Your task history memory starts here]
+
+ AIMessage 
+
+
+ ToolMessage 
+
+
+ HumanMessage 
+Action result: 🔗  Navigated to https://www.baidu.com
+
+ AIMessage 
+
+
+ ToolMessage 
+
+
+ HumanMessage 
+Action result: ⌨️  Input 东方雨虹 新闻 into index 12
+
+ HumanMessage 
+Action result: Something new appeared after action 1 / 2
+
+ AIMessage 
+
+
+ ToolMessage 
+
+
+ HumanMessage 
+Action result: 🖱️  Clicked button with index 50: “赚1亿分红近59亿”!“防水茅”
+东方雨虹
+回应分红质...
+
+ HumanMessage 
+[Task history memory ends]
+[Current state starts here]
+The following is one-time information - if you need to remember it write it to memory:
+Current url: https://baijiahao.baidu.com/s?id=1825563493272317117&wfr=spider&for=pc
+Available tabs:
+[TabInfo(page_id=0, url='https://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=1&rsv_idx=1&tn=baidu&wd=%E4%B8%9C%E6%96%B9%E9%9B%A8%E8%99%B9%20%E6%96%B0%E9%97%BB&fenlei=256&rsv_pq=0x900968ec012c3d13&rsv_t=8ab3Wply6rdIA5DUNgMbjDbKXeKFHFncDfX9%2BjHkv6yXzd3kOSOn9Nr1xU8z&rqlang=en&rsv_dl=ib&rsv_enter=1', title='东方雨虹 新闻_百度搜索'), TabInfo(page_id=1, url='https://baijiahao.baidu.com/s?id=1825563493272317117&wfr=spider&for=pc', title='“赚1亿分红近59亿”！“防水茅”东方雨虹回应分红质疑，去年营利双降')]
+Interactive elements from top layer of the current page inside the viewport:
+[Start of page]
+[0]<input text;wd/>
+[1]<input 百度一下;button/>
+[2]<a 百度首页/>
+[3]<a 登录/>
+“赚1亿分红近59亿”！“防水茅”东方雨虹回应分红质疑，去年营利双降
+[4]<a 红星新闻/>
+2025-03-03 17:10
+四川
+红星资本局3月3日消息，因“赚1亿却分红近59亿”引发广泛关注后，“防水茅”东方雨虹（002271.SZ）对此作出回应称，高比例现金分红不会影响公司未来正常经营，并透露实控人、董事长李卫国所获现金分红将主要用于偿还其股票质押融资，降低杠杆。
+一周前，东方雨虹披露了2024年年报及年度利润分配预案。其中，拟派发现金红利约44.19亿元的分红，引发市场关注。加上2024年上半年，东方雨虹已经实施了14.62亿元的分红方案，如果44.19亿的分红实施，去年一整年，东方雨虹的分红就高达58.81亿元。
+“大手笔分红”也引发了投资者的质疑，认为东方雨虹2024年分红比例过高，而业绩却不理想。据2024年年报，东方雨虹实现营业收入280.56亿元，同比下降14.52%；归母净利润为1.08亿元，同比下降95.24%。
+“赚1亿却分红近59亿”引发市场关注后，红星资本局注意到，东方雨虹今日发布了一份线上投资者关系活动记录表，其中对分红问题作出回应。
+有投资者提问，此次高比例现金分红是否会影响公司正常经营？东方雨虹回应称，公司此次现金分红方案是按照合并报表、母公司报表中可供分配利润孰低的原则，综合考虑公司资金状况及可供分配利润规模后制定的。并表示，此次现金分红不会影响公司未来正常经营。
+红星资本局注意到，截至2024年年末，实控人、董事长李卫国的持股比例为21.79%，为公司第一大股东，按比例估算，李卫国本次拿到的现金分红约为9.63亿元。值得一提的是，李卫国所持股份中，有79.58%的股份处于质押状态。
+谈及李卫国时，有投资者提问，此次现金分红是否会缓解实控人质押压力？东方雨虹表示，本次现金分红若能履行规定程序并实施，李卫国所获现金分红将主要用于偿还其股票质押融资，降低杠杆。预计后续其质押率会有比较明显的下降，从而显著化解实控人因质押率过高而带来的质押风险，本质上也是降低公司的经营风险，轻装上阵。
+对于2024年业绩情况，东方雨虹也在上述投资者关系会上作出解释，称收入下降的核心原因，与公司为了未来更好地高质量健康发展积极推动客户结构优化、渠道变革、业务模式转型有关。尽管2024年整体收入下行，但部分业务板块仍不乏亮点。
+东方雨虹还提到，公司披露的2025年收入预算目标为300亿元，较2024年有所提升。截至今日收盘，东方雨虹股价上涨1.32%，收报13.08元，总市值318.67亿元。
+红星新闻记者 强亚铣
+编辑 肖世清
+（下载红星新闻，报料有奖！）
+举报/反馈
+[5]<a 红星新闻/>
+3468万获赞
+402.4万粉丝
+西部影响力最大主流媒体
+成都商报红星新闻官方账号
+关注
+[6]<img />
+0
+[7]<img />
+0
+[8]<img />
+收藏
+[9]<img />
+分享
+设为首页
+© Baidu
+使用百度前必读
+意见反馈
+京ICP证030173号
+[10]<a 京公网安备11000002000001号/>
+... 1772 pixels below - scroll or extract content to see more ...
+Current step: 4/100Current date and time: 2025-03-15 19:55
+
+ RESPONSE
+{
+  "current_state": {
+    "evaluation_previous_goal": "Success - Clicked on the first search result",
+    "memory": "Clicked on the first search result to view the news details. 3 out of 10 steps completed. Next step is to extract the news title, time, and text content.",
+    "next_goal": "Extract the news title, time, and text content"
+  },
+  "action": [
+    {
+      "extract_content": {
+        "goal": "Extract the news title, time, and text content"
+      }
+    }
+  ]
+}

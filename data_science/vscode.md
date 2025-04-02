@@ -51,3 +51,9 @@
 
 - "terminal.integrated.env.windows": {"PYTHONPATH": "${workspaceFold}:${env:PYTHONPATH}"}
 - 在settings.json 中设置，但只能在vscode 系统集成的terminal中生效。
+
+
+# 在本地浏览器或应用程序中打开某些内容
+
+* https://vscode.github.net.cn/api/advanced-topics/remote-extensions#opening-something-in-a-local-browser-or-application
+* 更多trouble shooting 都在这里；

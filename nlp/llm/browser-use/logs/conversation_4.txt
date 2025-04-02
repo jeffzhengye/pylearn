@@ -1,0 +1,341 @@
+ SystemMessage 
+You are an AI agent designed to automate browser tasks. Your goal is to accomplish the ultimate task following the rules.
+
+# Input Format
+Task
+Previous steps
+Current URL
+Open Tabs
+Interactive Elements
+[index]<type>text</type>
+- index: Numeric identifier for interaction
+- type: HTML element type (button, input, etc.)
+- text: Element description
+Example:
+[33]<button>Submit Form</button>
+
+- Only elements with numeric indexes in [] are interactive
+- elements without [] provide only context
+
+# Response Rules
+1. RESPONSE FORMAT: You must ALWAYS respond with valid JSON in this exact format:
+{"current_state": {"evaluation_previous_goal": "Success|Failed|Unknown - Analyze the current elements and the image to check if the previous goals/actions are successful like intended by the task. Mention if something unexpected happened. Shortly state why/why not",
+"memory": "Description of what has been done and what you need to remember. Be very specific. Count here ALWAYS how many times you have done something and how many remain. E.g. 0 out of 10 websites analyzed. Continue with abc and xyz",
+"next_goal": "What needs to be done with the next immediate action"},
+"action":[{"one_action_name": {// action-specific parameter}}, // ... more actions in sequence]}
+
+2. ACTIONS: You can specify multiple actions in the list to be executed in sequence. But always specify only one action name per item. Use maximum {max_actions} actions per sequence.
+Common action sequences:
+- Form filling: [{"input_text": {"index": 1, "text": "username"}}, {"input_text": {"index": 2, "text": "password"}}, {"click_element": {"index": 3}}]
+- Navigation and extraction: [{"go_to_url": {"url": "https://example.com"}}, {"extract_content": {"goal": "extract the names"}}]
+- Actions are executed in the given order
+- If the page changes after an action, the sequence is interrupted and you get the new state.
+- Only provide the action sequence until an action which changes the page state significantly.
+- Try to be efficient, e.g. fill forms at once, or chain actions where nothing changes on the page
+- only use multiple actions if it makes sense.
+
+3. ELEMENT INTERACTION:
+- Only use indexes of the interactive elements
+- Elements marked with "[]Non-interactive text" are non-interactive
+
+4. NAVIGATION & ERROR HANDLING:
+- If no suitable elements exist, use other functions to complete the task
+- If stuck, try alternative approaches - like going back to a previous page, new search, new tab etc.
+- Handle popups/cookies by accepting or closing them
+- Use scroll to find elements you are looking for
+- If you want to research something, open a new tab instead of using the current tab
+- If captcha pops up, try to solve it - else try a different approach
+- If the page is not fully loaded, use wait action
+
+5. TASK COMPLETION:
+- Use the done action as the last action as soon as the ultimate task is complete
+- Dont use "done" before you are done with everything the user asked you, except you reach the last step of max_steps. 
+- If you reach your last step, use the done action even if the task is not fully finished. Provide all the information you have gathered so far. If the ultimate task is completly finished set success to true. If not everything the user asked for is completed set success in done to false!
+- If you have to do something repeatedly for example the task says for "each", or "for all", or "x times", count always inside "memory" how many times you have done it and how many remain. Don't stop until you have completed like the task asked you. Only call done after the last step.
+- Don't hallucinate actions
+- Make sure you include everything you found out for the ultimate task in the done text parameter. Do not just say you are done, but include the requested information of the task. 
+
+6. VISUAL CONTEXT:
+- When an image is provided, use it to understand the page layout
+- Bounding boxes with labels on their top right corner correspond to element indexes
+
+7. Form filling:
+- If you fill an input field and your action sequence is interrupted, most often something changed e.g. suggestions popped up under the field.
+
+8. Long tasks:
+- Keep track of the status and subresults in the memory. 
+
+9. Extraction:
+- If your task is to find information - call extract_content on the specific pages to get and store the information.
+Your responses must be always JSON with the specified format.
+
+ HumanMessage 
+Your ultimate task is: """打开百度搜索，搜索'东方雨虹'新闻，获取第一个结果后抽取新闻标题、时间、文本内容,然后退出""". If you achieved your ultimate task, stop everything and use the done action in the next step to complete the task. If not, continue as usual.
+
+ HumanMessage 
+Example output:
+
+ AIMessage 
+
+
+ ToolMessage 
+Browser started
+
+ HumanMessage 
+[Your task history memory starts here]
+
+ AIMessage 
+
+
+ ToolMessage 
+
+
+ HumanMessage 
+Action result: 🔗  Navigated to https://www.baidu.com
+
+ AIMessage 
+
+
+ ToolMessage 
+
+
+ HumanMessage 
+Action result: ⌨️  Input 东方雨虹 新闻 into index 12
+
+ HumanMessage 
+Action result: Something new appeared after action 1 / 2
+
+ HumanMessage 
+[Task history memory ends]
+[Current state starts here]
+The following is one-time information - if you need to remember it write it to memory:
+Current url: https://www.baidu.com/
+Available tabs:
+[TabInfo(page_id=0, url='https://www.baidu.com/', title='东方雨虹 新闻_百度搜索')]
+Interactive elements from top layer of the current page inside the viewport:
+[Start of page]
+[0]<a 百度首页/>
+[1]<a tj_settingicon>设置/>
+[2]<a tj_login>登录/>
+[3]<a />
+[4]<img />
+东方雨虹新闻最新消息
+东方雨虹新闻
+东方雨虹最近新闻
+东方雨虹事件
+东方雨虹宣传视频
+东方雨虹集团官网
+东方雨虹控股集团
+东方雨虹2020年
+东方雨虹被剔除
+东方雨虹最新公告
+东方雨虹新闻最新消息
+[5]<img />
+DeepSeek-R1
+反馈
+[6]<input wd/>
+
+[7]<input 百度一下;submit/>
+网页
+图片
+资讯
+视频
+笔记
+地图
+贴吧
+文库
+[8]<a 更多/>
+[9]<img />
+DeepSeek-R1
+帮你解答
+[10]<img />
+
+登录百度帐号 交易更有保障
+[11]<a 登录百度帐号/>
+认准
+标，百度为您提供权益保障
+查看
+[12]<a 《保障服务协议》/>
+与
+[13]<a 免保范围/>
+发生欺诈？
+[14]<a 申请保障/>
+[15]<a 加入商家保障/>
+获得
+标
+[16]<a 立即登录
+登录/>
+[17]<a 
+/>
+[18]<a 
+换一换/>
+热搜榜
+武汉榜
+民生榜
+财经榜
+
+[19]<a 习近平的民生之问/>
+1
+[20]<a 沪上阿姨涉事门店已闭店/>
+热
+2
+[21]<a 免费鸡蛋变万元账单/>
+热
+3
+[22]<a 全国两会后 多地部署这几件大事/>
+4
+[23]<a “胖猫”事件办案民警遭网暴/>
+热
+5
+[24]<a 去年315曝光的问题产品今年还在吗/>
+热
+6
+[25]<a 香港《大公报》再批李嘉诚卖港口/>
+热
+7
+[26]<a 4年前在医院和爸爸啃包子男孩现状/>
+8
+[27]<a 黄轩与女友墨尔本度假被偶遇/>
+9
+[28]<a 律师称被“背铐”带离 政法委介入/>
+10
+[29]<a 主播称母亲是迪拜公主吸引65万粉丝/>
+热
+11
+[30]<a 《哪吒2》冲入全球影史票房榜前5/>
+热
+12
+[31]<a 放恶犬围捕雪豹致其瘫痪？不实/>
+13
+[32]<a 《亮剑》王有胜扮演者已去世多年/>
+14
+[33]<a 女子在高校门口放下现金转身就走/>
+15
+[34]<a 男子操纵股票被罚没2.8亿元/>
+[35]<a ▶想在此推广您的产品吗?/>
+[36]<a 咨询热线：400-800-8888/>
+[37]<a e.baidu.com/>
+
+收起工具
+时间不限
+
+所有网页和文件
+
+站点内检索
+
+
+搜索工具
+百度为您找到以下结果
+股票走势AI分析报告,短期涨跌预估马上查看!
+股票走势判断,短期涨跌走势,短期K线分析,PF股票K线模型,AI行情走势预估报告2025黑科技,AI智能走势分析,马上点击查看股..
+股票:
+今日大盘
+涨跌预测
+股价查询
+金融信息:
+重磅消息
+最新信息
+热点追踪
+[38]<a 今日大盘/>
+[39]<a 利好消息/>
+[40]<a 涨跌预测/>
+[41]<a 个股分析/>
+[42]<a 股价查询/>
+[43]<a 免费诊股/>
+[44]<a 热点追踪/>
+[45]<a 行情趋势/>
+[46]<a 查看更多相关信息>>/>
+[47]<a 利多星（上海）
+2025-03
+
+广告/>
+[48]<a 东方雨虹 新闻的最新相关信息>东方雨虹 新闻
+的最新相关信息/>
+[49]<a />
+[50]<a 标题：“赚1亿分红近59亿”!“防水茅”东方雨虹回应分红质...>“赚1亿分红近59亿”!“防水茅”
+东方雨虹
+回应分红质.../>
+渠道变革、业务模式转型有关。尽管2024年整体收入下行，但部分业务板块仍不乏亮点。东方雨虹还提到，公司披露的2025年收入预算...
+[51]<a 红星新闻
+3月3日/>
+[52]<a 标题：东方雨虹赚1亿仍砸44亿分红,实控人独分近10亿称“不进自己腰包”>东方雨虹
+赚1亿仍砸44亿分红,实控人独分近10亿称“不进自己腰包”/>
+头条
+新闻
+赚1亿元仍砸44亿元分红,实控人独分近10亿元称“不进自己腰包”,东方雨虹业绩失速华夏时报 2025-03-07 22:54:26 评论 视频|东方雨虹:赚他1个亿,再分58个亿,爽翻啦?市...
+[53]<a 新浪
+前天15:32/>
+[54]<a />
+[55]<a 标题：东方雨虹数智科技公司启幕暨AI创新实验室揭牌仪式在...>东方雨虹
+数智科技公司启幕暨AI创新实验室揭牌仪式在.../>
+3月13日,北京东方雨虹数智科技有限公司(以下简称“雨虹数智”)开业仪式暨雨虹AI创新实验室揭牌仪式在京举行,东方雨虹董事长李...
+[56]<a 中国质量新闻网
+昨天12:49/>
+[57]<a 查看更多>查看更多
+/>
+[58]<a 启新篇、赴新程:
+东方雨虹
+董事长李卫国赴湖北武汉走访调研-.../>
+[59]<a />
+2025年1月3日
+岁月流转,华章日新。此次新年座谈会的成功召开,不仅为
+东方雨虹
+2025年高质量发展擘画了明确蓝图,也为广大合伙人注入了坚定信心与澎湃动力。展望未来,东方雨虹将继续坚守创新、...
+[60]<a 中国质量新闻网/>
+
+[61]<a 满血版DeepSeek,就用腾讯元宝/>
+[62]<a />
+[63]<img />
+[64]<a 最近10分钟前有人下载/>
+[65]<a 下载腾讯元宝,联网搜索,整合公众号信息!来元宝,体验高速专服,不卡顿不限次!/>
+[66]<a />
+[67]<img />
+[68]<a AI搜索/>
+[69]<a 问得快答得好/>
+[70]<a />
+[71]<img />
+[72]<a AI写作/>
+[73]<a 一键改写创作/>
+[74]<a />
+[75]<img />
+[76]<a AI阅读/>
+[77]<a 本地文件智能总结/>
+[78]<a />
+[79]<img />
+[80]<a 智能识图/>
+[81]<a 图片分析总结/>
+[82]<a 查看更多相关信息>>/>
+[83]<a 腾讯元宝
+2025-03
+
+广告/>
+[84]<img />
+[85]<a 东方雨虹
+建筑修缮集团/>
+[86]<a />
+[87]<img />
+起步即冲刺丨
+东方雨虹
+建筑修缮各服务中心全面复工(2) 建筑医院丨东方雨虹建筑修缮荣获实用新型专利证书 为爱前行丨东方雨虹建筑修缮助力抗疫,我们一直在路上 携手共战,全面复工丨积极恢复生...
+[88]<a 东方/>
+
+[89]<a 东方雨虹
+2024年净利润1.08亿元 拟分红44亿元引争议/>
+... 2419 pixels below - scroll or extract content to see more ...
+Current step: 3/100Current date and time: 2025-03-15 19:55
+
+ RESPONSE
+{
+  "current_state": {
+    "evaluation_previous_goal": "Success - Searched for '\u4e1c\u65b9\u96e8\u8679 \u65b0\u95fb' on Baidu",
+    "memory": "Searched for '\u4e1c\u65b9\u96e8\u8679 \u65b0\u95fb' on Baidu. 2 out of 10 steps completed. Next step is to click on the first search result to extract the news title, time, and text content.",
+    "next_goal": "Click on the first search result to extract the news details"
+  },
+  "action": [
+    {
+      "click_element": {
+        "index": 50
+      }
+    }
+  ]
+}
