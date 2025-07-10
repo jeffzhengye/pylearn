@@ -46,6 +46,21 @@ go to code console settings
 %load_ext autoreload
 %autoreload 2
 
+## %time和 %timeit – 性能测量与优化
+
+* 测量单次执行时间 
+ %time bee_data=df[df['species'] =='bee']      
+ * 多次执行并统计平均时间 
+ %timeit df[df['species'] =='butterfly'].count()
+
+# %run – 外部脚本执行
+
+ * 运行一个清理蝙蝠观察数据的脚本
+ %run clean_bat_data.py
+
+* 这种执行方式保持了脚本的完整性，同时将执行结果和变量状态导入到当前笔记本环境中。
+
+
 ## 以 latex 渲染当前 cell
 
 %%latex

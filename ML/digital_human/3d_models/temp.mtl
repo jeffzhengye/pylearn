@@ -1,0 +1,111 @@
+# File produced by Open Asset Import Library (http://www.assimp.sf.net)
+# (assimp v5.4.0)
+
+newmtl hair
+Kd 0.011764707 0.00784313772 0.00784313772
+Ka 0.011764707 0.00784313772 0.00784313772
+Ks 0.0666666701 0.0666666701 0.0666666701
+Ke 0 0 0
+Tf 0 0 0
+d 1
+Ns 48.5029259
+illum 2
+map_Kd uv.tga
+map_d uv.tga
+bump uv_n.jpg
+map_bump uv_n.jpg
+
+newmtl yf
+Kd 0.588235319 0.588235319 0.588235319
+Ka 0.588235319 0.588235319 0.588235319
+Ks 0.899999976 0.899999976 0.899999976
+Ke 0 0 0
+Tf 0 0 0
+d 1
+Ns 1.41421354
+illum 2
+map_Kd uv.tga
+bump uv_n.jpg
+map_bump uv_n.jpg
+
+newmtl pifu
+Kd 0.588 0.588 0.588
+Ka 0.588 0.588 0.588
+Ks 0.899999976 0.899999976 0.899999976
+Ke 0 0 0
+Tf 0 0 0
+d 1
+Ns 11.3137083
+illum 2
+map_Kd uv.tga
+
+newmtl jm
+Kd 0.011764707 0.011764707 0.011764707
+Ka 0.011764707 0.011764707 0.011764707
+Ks 0.0274509825 0.0274509825 0.0274509825
+Ke 0 0 0
+Tf 0 0 0
+d 1
+Ns 1.07177341
+illum 2
+map_Kd uv.tga
+map_d uv.tga
+bump uv_n.jpg
+map_bump uv_n.jpg
+
+newmtl eye
+Kd 0.588 0.588 0.588
+Ka 0.588 0.588 0.588
+Ks 0.899999976 0.899999976 0.899999976
+Ke 0 0 0
+Tf 0 0 0
+d 1
+Ns 147.033371
+illum 2
+map_Kd uv.tga
+
+newmtl shoe
+Kd 0.588235319 0.588235319 0.588235319
+Ka 0.588235319 0.588235319 0.588235319
+Ks 0.899999976 0.899999976 0.899999976
+Ke 0 0 0
+Tf 0 0 0
+d 1
+Ns 3.99999976
+illum 2
+map_Kd uv.tga
+bump uv_n.jpg
+map_bump uv_n.jpg
+
+newmtl wz
+Kd 0.588235319 0.588235319 0.588235319
+Ka 0.588235319 0.588235319 0.588235319
+Ks 0.899999976 0.899999976 0.899999976
+Ke 0 0 0
+Tf 0 0 0
+d 1
+Ns 1.51571655
+illum 2
+map_Kd uv.tga
+bump uv_n.jpg
+map_bump uv_n.jpg
+
+newmtl leg
+Kd 0.588 0.588 0.588
+Ka 0.588 0.588 0.588
+Ks 0.899999976 0.899999976 0.899999976
+Ke 0 0 0
+Ns 11.3137083
+illum 2
+
+newmtl hand
+Kd 0.588 0.588 0.588
+Ka 0.588 0.588 0.588
+Ks 0.899999976 0.899999976 0.899999976
+Ke 0 0 0
+Tf 0 0 0
+d 1
+Ns 11.3137083
+illum 2
+map_Kd uv.tga
+
