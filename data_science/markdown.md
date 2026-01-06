@@ -26,3 +26,9 @@
 
 * Python tool for converting files and office documents to Markdown.
 * https://github.com/microsoft/markitdown
+
+## markdown to docx
+
+### pandoc
+
+* awesome: pandoc ReadMe.md -o ReadMe.docx

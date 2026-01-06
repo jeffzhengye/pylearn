@@ -25,7 +25,7 @@ This PR adds documentation for the standardized pull request workflow as specifi
 ## Documentation
 - [x] Architecture changes recorded in docs/pr_workflow.md
 - [x] API modification documentation - Not applicable
-- [x] Configuration update list - Not applicable  
+- [x] Configuration update list - Not applicable
 - [x] Dependency documentation - Not applicable
 
 ## Quality Gate Checks
